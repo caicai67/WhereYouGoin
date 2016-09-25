@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$sql = "SELECT originairport, destinationairport FROM table WHERE flydate=\"1990-06-00\"";
+$sql = "SELECT originairport, destinationairport FROM flight  WHERE flydate=\"1990-06-00\"";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
