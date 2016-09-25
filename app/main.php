@@ -13,10 +13,10 @@ $tablename = "flight";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 
-if ($conn == null) {
-	echo "null";
-}
-echo $conn;
+// if ($conn == null) {
+// 	echo "null";
+// }
+// echo $conn;
 
 // Check connection
 if ($conn->connect_error) {
