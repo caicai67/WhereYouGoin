@@ -1,5 +1,33 @@
 
 
+
+
+ <?php
+$servername = "localhost";
+$username = "root";
+$password = "hackgt";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?> 
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <?php
 // use \Psr\Http\Message\ServerRequestInterface as Request;
 // use \Psr\Http\Message\ResponseInterface as Response;
@@ -13,3 +41,6 @@ $app->get('/', function() use($app){
 
 });
 $app->run();
+
+?>
+ -->
