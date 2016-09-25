@@ -16,7 +16,8 @@ $conn = new mysqli($servername, $username, $password);
 if ($conn == NULl) {
 	echo "null";
 }
-echo $conn;
+// echo $conn;
+echo var_dump($conn);
 
 // Check connection
 if ($conn->connect_error) {
