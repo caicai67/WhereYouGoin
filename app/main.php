@@ -13,6 +13,9 @@ $tablename = "flight";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 
+if ($conn == null) {
+	echo "null";
+}
 echo $conn;
 
 // Check connection
