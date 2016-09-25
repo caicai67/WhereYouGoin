@@ -17,7 +17,7 @@ if ($conn == NULL) {
 	echo "null";
 }
 // echo $conn;
-echo var_dump($conn);
+echo var_dump($conn); # 
 
 // Check connection
 if ($conn->connect_error) {
@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 $sql = "SELECT originairport, destinationairport FROM flight  WHERE flydate=\"1990-06-00\"";
-$result = $conn->query($sql)->result();
+$result = $conn->query($sql)->result(); # 
 
 if ($result->num_rows > 0) {
 	// output data of each row
