@@ -13,7 +13,7 @@ $tablename = "flight";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 
-if ($conn == NULl) {
+if ($conn == NULL) {
 	echo "null";
 }
 // echo $conn;
@@ -26,11 +26,11 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 $sql = "SELECT originairport, destinationairport FROM flight  WHERE flydate=\"1990-06-00\"";
-$result = $conn->query($sql);
+$result = $conn->query($sql)->result();
 
 if ($result->num_rows > 0) {
 	// output data of each row
-
+	echo "HELLO";
 } else {
 	echo "0 results";
 }
