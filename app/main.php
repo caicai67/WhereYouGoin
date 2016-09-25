@@ -7,6 +7,9 @@ $servername = "localhost";
 $username = "root";
 $password = "hackgt";
 
+$dbname = "flightdatabase";
+$tablename = "flight";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 
@@ -15,6 +18,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
+
+$sql = "SELECT originairport, destinationairport FROM table WHERE flydate=\"1990-06-00\"";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+	// output data of each row
+
+} else {
+	echo "0 results";
+}
+
+
+
 ?> 
 
 
